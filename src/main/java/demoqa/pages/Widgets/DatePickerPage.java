@@ -14,7 +14,7 @@ public class DatePickerPage extends BasePageDqa {
     private By SelectDate = By.id("datePickerMonthYearInput");
     private By monthDropDown = By.className("react-datepicker__month-select");
     private By yearDropDown = By.className("react-datepicker__year-select");
-    private  By dayValue(String day){ // it is recommended to use "By" in private mwethod ,if we use it more than one time and calling that method as it will be easy for code maintainence
+    private  By dayValue(String day){ 
         return By.xpath("//div[contains(@class,'react-datepicker__day react-datepicker__day--')][text()='"+ day +"']");
     }
     public void clickDay(String day){
@@ -35,8 +35,7 @@ public String getDate(){
     String date = find(SelectDate).getDomAttribute("value");
         return date;
 }
-// the "." shortcut is used to find the value that matches the class attribute
-// the "#" shortcut is used to find the value that matches the id attribute
+
  public void selectMonth(String month){
      DropdownUtilities du = new DropdownUtilities(driver);
      du.selectByVisibleText(monthDropDown,month);
