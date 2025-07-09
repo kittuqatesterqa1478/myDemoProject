@@ -11,9 +11,7 @@ public class IFramePage extends HomePage {
         super(driver);
     }
 
-    //There are 3 ways to switch to iframes - Using String , Using Index , Using Webelement
-    //To switch Using String , the DOM should have Id or Name attribute
-    // If id and value are not present in the DOM for frame then we must use switching using Web Elements
+   
     private By framesMenu = By.xpath("//span[text()='Frames']");
     private By textInFrame = By.id("sampleHeading");
     private String iFrameBigBox = "frame1";
