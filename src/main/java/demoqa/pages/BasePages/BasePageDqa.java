@@ -8,7 +8,7 @@ public WebDriver driver ;
 public BasePageDqa (WebDriver driver ) {
 this.driver=driver;
 }
-protected WebElement find(By locator) { //it is kept protected becoz we want to resuse it only in Base class and page object classes
+protected WebElement find(By locator) {
 return driver.findElement(locator);
 }
 protected void set(By locator , String text) {
