@@ -10,7 +10,7 @@ public class Windows extends HomePage {
     public Windows(WebDriver driver) {
         super(driver);
     }
-    // types of windows - 1. getWindowHandle() , 2. getWindowHandles() , 3. switchTo().window()
+   
 private By newTabButton =By.id("tabButton");
     private By windowsCard = By.xpath("//span[text()='Browser Windows']");
     SwitchToUtility stu = new SwitchToUtility(driver);
@@ -22,8 +22,7 @@ private By newTabButton =By.id("tabButton");
        String currentWindow = driver.getWindowHandle();
        Set<String> allWindows = driver.getWindowHandles();
 
-       String switchedWindowUrl = null; // if we want to use any varibale that we will get in any loop , then we should
-       // first declare it outside the loop with null otherwise it will be out of scope
+       String switchedWindowUrl = null; 
        for (String window : allWindows) {
            if (!window.equals(currentWindow)) {
                driver.switchTo().window(window);
