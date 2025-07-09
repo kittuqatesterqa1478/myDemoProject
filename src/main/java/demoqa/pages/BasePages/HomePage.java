@@ -27,7 +27,7 @@ private By elementsCard = By.xpath("//div//h5[text()='Elements']");
 
 
 
-public PracticeFormsPage goToForms() {   // we can also give a class as return type for the transition method as page is changing in this method
+public PracticeFormsPage goToForms() {   
 jse.scrollToElementJS(formsCard);
 click(formsCard);
 return new PracticeFormsPage(driver);
