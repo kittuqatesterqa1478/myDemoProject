@@ -10,8 +10,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 @Listeners(TestListener.class)
 public class AlertTest extends BaseTest {
-    @Test(retryAnalyzer = RetryUtilities.class) //here retryAnalyzer is an attribute of @Test annotation which
-    // allows you to automatically retry a failed test case a certain number of times
+    @Test(retryAnalyzer = RetryUtilities.class) 
     public void infoAlertTest(){
         SwitchToUtility ste = new SwitchToUtility(driver);
       var alertPage = homepage.gotoAlertsPage();
