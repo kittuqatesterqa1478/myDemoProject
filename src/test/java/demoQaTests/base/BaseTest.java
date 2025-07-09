@@ -32,7 +32,7 @@ public void setUp () {
 driver = new ChromeDriver();
 driver.manage().window().maximize();
 //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    // Do not mix implicit wait with any other types of wait otherwise it will cause unpredictable wait timeouts
+
 homepage = new HomePage(driver);
 jsce = new JavaScriptExecutor(driver);
 }
