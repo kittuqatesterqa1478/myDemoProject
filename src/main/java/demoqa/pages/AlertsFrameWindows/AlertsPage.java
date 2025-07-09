@@ -9,10 +9,7 @@ public class AlertsPage extends HomePage {
     public AlertsPage(WebDriver driver) {
         super(driver);
     }
-    // Types of alerts - information alert, confirmation alert and prompt alert
-    // modals allow to inspect text and click button while alerts don't (becoz alert is not attached to the DOM)
-    // so to perform any action on the alerts we need to switch to alerts
-private By alertsMenu =By.xpath("//span[text()='Alerts']");
+   private By alertsMenu =By.xpath("//span[text()='Alerts']");
     private By alertButton = By.id("alertButton");
     private By confirmAlertButton= By.id("confirmButton");
     private By confirmResult = By.id("confirmResult");
